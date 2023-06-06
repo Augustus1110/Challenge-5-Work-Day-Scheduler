@@ -27,61 +27,51 @@ var timeArray = [
   {
     hour: 9,
     label: "9 AM",
-    id: "hou-1",
+    id: "hour-1",
   },
   {
     hour: 10,
     label: "10 AM",
-    id: "hou-2",
+    id: "hour-2",
   },
   {
     hour: 11,
     label: "11 AM",
-    id: "hou-3",
+    id: "hour-3",
   },
   {
     hour: 12,
     label: "12 PM",
-    id: "hou-4",
+    id: "hour-4",
   },
   {
     hour: 13,
     label: "1 PM",
-    id: "hou-5",
+    id: "hour-5",
   },
   {
     hour: 14,
     label: "2 PM",
-    id: "hou-6",
+    id: "hour-6",
   },
   {
     hour: 15,
     label: "3 PM",
-    id: "hou-7",
+    id: "hour-7",
   },
   {
     hour: 16,
     label: "4 PM",
-    id: "hou-8",
+    id: "hour-8",
   },
   {
     hour: 17,
     label: "5 PM",
-    id: "hou-9",
+    id: "hour-9",
   },
 ];
 
 function drawTimeBlock() {
-  /*var timeBlock = $("<div>").addClass("time-block");
-  var hour = $("<div>").addClass("hour");
-  var description = $("<textarea>").addClass("description");
-  var saveBtn = $("<button>").addClass("saveBtn");
-  var saveIcon = $("<i>").addClass("fas fa-save");
-
-  timeBlock.append(hour, description, saveBtn);
-  saveBtn.append(saveIcon);
-  return timeBlock;*/
-
   $("#time-block-div").empty();
   var currentHour = dayjs().hour();
 
@@ -96,7 +86,7 @@ function drawTimeBlock() {
       classToAdd = "future";
     }
     
-    var timeBlock = `
+    var timeBlock = $(`
     <div id="${timeObj.id}" class="row time-block ${classToAdd}">
       <div class="col-2 col-md-1 hour text-center py-3">${timeObj.label}</div>
       <textarea id="text-${timeObj.hour}" class="col-8 col-md-10 description" rows="3"> </textarea>
@@ -104,12 +94,12 @@ function drawTimeBlock() {
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
     </div>
-    `;
+    `);
     $("#time-block-div").append(timeBlock);
   }
 }
 
 
 function saveTask(id){
- console.log($('#'+id).val());
+ console.log($(`#${id}`).val());
 }
