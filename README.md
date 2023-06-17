@@ -53,6 +53,10 @@ Please note that a modern web browser with JavaScript support is required to run
 
 ![Scheduler](assets/images/Scheduler-Screenshot.png)
 
+## Site URL
+
+https://augustus1110.github.io/Wonderful-Work-Day-Scheduler/
+
 
 ## Acknowledgments
 
